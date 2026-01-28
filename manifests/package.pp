@@ -9,6 +9,8 @@ define ss_php::package(
     notice("${name} is not available as a standard package for PHP >= 8. Skipping install")
   } elsif $php_version_float <= 5.6 and $name == 'apcu-bc' {
     notice("${name} is not available as a standard package for PHP <= 5.6. Skipping install")
+  } elsif $php_version_float >= 8.5 and $name == 'opcache' {
+    notice("${name} is not available as a standard package for PHP >= 8.5 Skipping install")
   } else {
     package { "php${php_version}-${name}":
       ensure => $ensure,

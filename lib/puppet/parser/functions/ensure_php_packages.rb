@@ -38,6 +38,9 @@ EOS
         if version.to_s <= "5.6" && package === "apcu-bc"
           next
         end
+        if version.to_s >= "8.5" && package === "opcache"
+          next
+        end
         function_ensure_resource(["package", "php#{version.to_s}-#{package}", defaults])
       end
     end

@@ -1,6 +1,6 @@
 {
   "name": "puppet-ss_php",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "SilverStripe Ltd",
   "license": "BSD-3-Clause",
   "summary": "Puppet module for setting up PHP using deb.sury.org packages",

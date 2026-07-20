@@ -2,7 +2,7 @@ class ss_php::repo(
   String                  $domain = "apt.silverstripe.cloud",
   Variant[String, Undef]  $login = undef,
   String                  $password = "",
-  String                  $gpg_key_url = "https://${domain}/gpg/repo-signing.gpg",
+  String                  $gpg_key_id = "DD9E8E9D0E7125F71CFA8BED66E8175101A28EDE"
 ) {
   include apt
 
@@ -33,7 +33,7 @@ class ss_php::repo(
     release  => 'jammy',
     repos    => 'main',
     key      => {
-      'id'     => '63E262B12AD0AD8F2733B1A3CCB8D66DE80CF463',
+      'id'     => $gpg_key_id,
       'source' => "https://${domain}/gpg/repo-signing.gpg",
     },
     include  => {

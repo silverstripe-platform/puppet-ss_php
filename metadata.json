@@ -32,9 +32,9 @@
   ],
   "operatingsystem_support": [
     {
-      "operatingsystem": "Debian",
+      "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "9"
+        "22.04"
       ]
     }
   ]
